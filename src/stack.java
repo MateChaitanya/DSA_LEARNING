@@ -64,10 +64,11 @@ public class stack {
 //============================================================================================================
 //Q.Push at the Bottom of the Stack
 //Recursion is used ...
-
+/*
 import java.util.Stack;
 
 public class stack {
+    // Function to push an element to the bottom of the stack
     public static void pushAtBottom(Stack<Integer> s, int data) {
         if (s.isEmpty()) {
             s.push(data);
@@ -77,18 +78,46 @@ public class stack {
         pushAtBottom(s, data);
         s.push(top);
     }
-
+    // Main method
     public static void main(String[] args) {
+        // Creating a stack
         Stack<Integer> s = new Stack<>();
+        // Pushing elements onto the stack
         s.push(1);
         s.push(2);
         s.push(3);
-
+        // Calling the function to push 4 to the bottom of the stack
         pushAtBottom(s, 4);
-
+        // Printing and popping elements from the stack
         while (!s.isEmpty()) {
             System.out.println(s.pop());
         }
     }
 }
+*/
+//========================================================================================================
+//Q.Reverse a String using Stack
+public class stack{
+    public static String reverseString(String str){
+        Stack<Character> s = new Stack<>();
+        int idx = 0;
+        while(idx<str.length()){
+            s.push(str.charAt(idx));
+            idx++;
+        }
+        StringBuilder result = new StringBuilder(" ");
+        while(!s.isEmpty()){
+            char curr =s .pop();
+            result.append(curr);
+        }
+        return result.toString();
 
+    }
+
+    public static void main(String[] args) {
+        String str ="HELLOWORLD";
+        String result = reverseString(str);
+        System.out.println(result);
+
+    }
+}
