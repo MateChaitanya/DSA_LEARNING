@@ -97,6 +97,7 @@ public class stack {
 */
 //========================================================================================================
 //Q.Reverse a String using Stack
+/*
 public class stack{
     public static String reverseString(String str){
         Stack<Character> s = new Stack<>();
@@ -119,5 +120,34 @@ public class stack{
         String result = reverseString(str);
         System.out.println(result);
 
+    }
+}*/
+//===================================================================================================
+import java.util.Stack;
+
+public class stack {
+    static boolean isBalanced(String expression) {
+        Stack<Character> stack = new Stack<>();
+        for (char bracket : expression.toCharArray()) {
+            if (bracket == '(' || bracket == '[' || bracket == '{') {
+                stack.push(bracket);
+            } else {
+                if (stack.isEmpty() || !isMatchingPair(stack.pop(), bracket)) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    static boolean isMatchingPair(char character1, char character2) {
+        return (character1 == '(' && character2 == ')') ||
+                (character1 == '[' && character2 == ']') ||
+                (character1 == '{' && character2 == '}');
+    }
+
+    public static void main(String[] args) {
+        String expression = "{[()]}";
+        System.out.println("Balanced: " + isBalanced(expression));
     }
 }
