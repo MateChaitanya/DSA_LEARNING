@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
-
+/*
 public class queue {
     public static void main(String[] args) {
         // Creating a Queue using LinkedList
@@ -22,6 +22,56 @@ public class queue {
         String frontElement = queue.peek();
         System.out.println("Front Element: " + frontElement);
         System.out.println("Queue after peek: " + queue);
+    }
+}
+
+ */
+//===============================================================================================
+//Implementation of queue using array
+import java.util.LinkedList;
+
+class QueueUsingLinkedList {
+    private LinkedList<Integer> list = new LinkedList<>();
+
+    // Add an element to the back of the queue
+    public void enqueue(int data) {
+        list.addLast(data);
+    }
+
+    // Remove and return the element from the front of the queue
+    public int dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty. Cannot dequeue.");
+            return -1; // Or throw an exception
+        }
+        return list.removeFirst();
+    }
+
+    // Check if the queue is empty
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    // Get the size of the queue
+    public int size() {
+        return list.size();
+    }
+}
+
+// Example Usage:
+public class queue {
+    public static void main(String[] args) {
+        QueueUsingLinkedList queue = new QueueUsingLinkedList();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        System.out.println("Dequeued: " + queue.dequeue());
+        System.out.println("Dequeued: " + queue.dequeue());
+
+        System.out.println("Is Queue Empty? " + queue.isEmpty());
+        System.out.println("Queue Size: " + queue.size());
     }
 }
 
