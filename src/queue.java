@@ -29,7 +29,7 @@ public class queue {
 //===============================================================================================
 //Implementation of queue using array
 import java.util.LinkedList;
-
+/*
 class QueueUsingLinkedList {
     private LinkedList<Integer> list = new LinkedList<>();
 
@@ -74,4 +74,41 @@ public class queue {
         System.out.println("Queue Size: " + queue.size());
     }
 }
+*/
+//================================================================================
 
+class queue {
+    int a[];
+    int capacity;
+    int rear ;
+    public queue(int n){
+        capacity = n;
+        a = new int [n];
+        rear = -1;
+    }
+    void enqueue ( int data ) throws Exception {
+        if (rear == capacity-1){
+            throw new Exception();
+        }
+        rear ++;
+        a[rear]=data;
+    }
+    int dqueue() throws Exception {
+        if(rear ==-1){
+            throw new Exception();
+
+        }
+        int result = a[0];
+        for(int  i =0 ; i <rear; i++){
+            a[i] = a[i+1];
+        }
+        rear --;
+        return result;
+    }
+    int getfront() throws Exception {
+        if (rear == -1){
+            throw new Exception();
+        }
+        return  a[0];
+    }
+}
