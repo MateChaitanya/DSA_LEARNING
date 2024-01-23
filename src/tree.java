@@ -224,7 +224,6 @@ public class tree {
         if (root == null) {
             return;
         }
-
         postorder(root.left);                  // Recursively traverse the left subtree
         postorder(root.right);
         System.out.print(root.data + " ");// Recursively traverse the right subtree
