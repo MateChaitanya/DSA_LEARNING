@@ -1,34 +1,48 @@
 public class tree {
 
+    // Node class to represent a node in the binary tree
     static class Node {
-        int data;
-        Node left;
-        Node right;
-        Node(int data){
-            this.data=data;
+        int data;         // Data of the node
+        Node left;        // Reference to the left child
+        Node right;       // Reference to the right child
+
+        // Constructor to initialize a new node
+        Node(int data) {
+            this.data = data;
             this.left = null;
-            this.right= null;
+            this.right = null;
         }
     }
 
-    static class BinaryTree{
-        static int idx = -1;
-        public static Node buildTree(int nodes[]){
-            idx++;
-            if (nodes[idx]==-1){
-                return null;
+    // BinaryTree class to handle tree construction
+    static class BinaryTree {
+        static int idx = -1;   // Static variable to keep track of the index in the array
+
+        // Method to build a binary tree from an array representation
+        public static Node buildTree(int nodes[]) {
+            idx++;   // Increment index
+            if (nodes[idx] == -1) {
+                return null;  // If the element is -1, return null (indicating a null node)
             }
-            Node newNode = new Node(nodes[idx]);
-            newNode.left = buildTree(nodes);
-            newNode.right = buildTree(nodes);
-            return newNode ;
+            Node newNode = new Node(nodes[idx]);   // Create a new node with the current data
+            newNode.left = buildTree(nodes);       // Recursively build the left subtree
+            newNode.right = buildTree(nodes);      // Recursively build the right subtree
+            return newNode;   // Return the newly constructed node
         }
     }
-    public static void main(String[] args) {
-        int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
-        BinaryTree tree = new BinaryTree();
-        Node root = tree.buildTree(nodes);
-        System.out.println(root.data);
 
+    // Main method
+    public static void main(String[] args) {
+        // Array representation of a binary tree
+        int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+
+        // Create an instance of the BinaryTree class
+        BinaryTree tree = new BinaryTree();
+
+        // Build the binary tree and get the root
+        Node root = tree.buildTree(nodes);
+
+        // Print the data of the root node
+        System.out.println(root.data);
     }
 }
