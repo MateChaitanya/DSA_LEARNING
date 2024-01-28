@@ -20,6 +20,10 @@ public class array {
         System.out.println("chem: " + marks[1]);
         System.out.println("maths: " + marks[2]);
 
+        //update the maths marks
+        marks[2]=100;
+        System.out.println("maths: " + marks[2]);
+
 
     }
 }
