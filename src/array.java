@@ -24,6 +24,10 @@ public class array {
         marks[2]=100;
         System.out.println("maths: " + marks[2]);
 
+        //calculate percentage
+        int percentage = ( marks[0]+ marks[1] + marks[2])/3;
+        System.out.println("percentage = " + percentage + "%");
+
 
     }
 }
