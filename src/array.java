@@ -255,6 +255,7 @@ public class array {
  */
 //========================================================================================================
 //Trapping rainwater
+/*
 public class array{
 
     public static int trappedRainwater(int height[]){
@@ -286,5 +287,31 @@ public class array{
     public static void main(String[] args) {
         int height[] = {4,2,0,6,3,2,5};
         System.out.println(trappedRainwater(height));
+    }
+}
+
+ */
+//=================================================================================================================================
+//Buy and Sell Stocks
+public class array {
+
+    public static int buyAndSellStocks(int prices[]){
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int i = 0; i < prices.length; i++) {
+            if(buyPrice < prices[i]){
+                int profit = prices [i]-buyPrice;
+                maxProfit = Math.max(maxProfit,profit);
+            }
+            else{
+                buyPrice=prices[i];
+            }
+        }
+        return maxProfit;
+    }
+    public static void main(String[] args) {
+        int  prices [] = { 7,1,5,3,6,4};
+        System.out.println(buyAndSellStocks(prices));
     }
 }
