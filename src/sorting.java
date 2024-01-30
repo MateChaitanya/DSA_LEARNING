@@ -1,4 +1,4 @@
-public class sorting{
+/*public class sorting{
 
     public static void bubbleSort(int[] array) {
         int n = array.length;
@@ -39,3 +39,42 @@ public class sorting{
         }
     }
 }
+
+ */
+//=====================================================================================================================
+public class sorting{
+
+    public static void selectionSort(int[] array) {
+        int n = array.length;
+
+        // Traverse through all array elements starting from 0
+        for (int i = 0; i < n - 1; i++) {
+            // Find the minimum element in the unsorted part
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            // Swap the found minimum element with the first element
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {5, 2, 8, 3, 1};
+
+        // Call selectionSort to sort the array
+        selectionSort(numbers);
+
+        // Print the sorted array
+        System.out.print("Sorted array: ");
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+    }
+}
+
