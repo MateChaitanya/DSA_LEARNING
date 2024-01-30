@@ -293,6 +293,7 @@ public class array{
  */
 //=================================================================================================================================
 //Buy and Sell Stocks
+/*
 public class array {
 
     public static int buyAndSellStocks(int prices[]){
@@ -313,5 +314,55 @@ public class array {
     public static void main(String[] args) {
         int  prices [] = { 7,1,5,3,6,4};
         System.out.println(buyAndSellStocks(prices));
+    }
+}
+
+ */
+//================================================================================================================================
+/*
+public class array {
+    public static void printSubarray(int numbers[]) {
+        for (int i = 0; i < numbers.length; i++) {
+            int start = i;
+            for (int j = i; j < numbers.length; j++) {
+                int end = j;
+                for (int k = start; k <= end; k++) {
+                    System.out.print(numbers[k] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int nummbers[] = {1, 2, 3, 4, 5, 6, 7, 8};
+        int sum =0;
+        for (int i = 0; i < nummbers.length ; i++) {
+
+            sum += nummbers[i];
+        }
+        System.out.println("Sum of array is " + sum);
+        printSubarray(nummbers);
+
+    }
+}
+
+ */
+//===============================================================================================================================
+public class array {
+    public static int findMax(int numbers[]){
+        int min = numbers[0];
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]< min){
+                min = numbers[i];
+            }
+        }
+        return min;
+    }
+    public static void main(String[] args) {
+        int numbers[]={2,3,4,5,6,7};
+        int min = findMax(numbers);
+        System.out.println("Maximum element in the array :" + min);
     }
 }
