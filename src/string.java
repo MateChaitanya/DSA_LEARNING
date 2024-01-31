@@ -53,7 +53,7 @@ import java.util.Scanner;
 //============================================================================================
 //Q2.Given a short route containing 4 direction (EWNS)
 // find the shortest path to reach destination
-
+/*
 public class string{
 
     public static float getShortestpath(String path){
@@ -85,5 +85,69 @@ public class string{
     public static void main(String[] args) {
         String path = "WNEENESENNN";
         System.out.println(getShortestpath(path));
+    }
+}
+
+ */
+//===============================================================================================
+/*public class string{
+    public static void main(String[] args) {
+        String s1 ="Tony";
+        String s2 ="Tony";
+        String s3= new String("Tony");
+
+//        if(s1 ==s2){
+//            System.out.println("Strings are equal");
+//        }else {
+//            System.out.println("Strings are not equal");
+//        }
+//        if(s1 ==s3){
+//            System.out.println("Strings are equal");
+//        }else {
+//            System.out.println("Strings are not equal");
+//        }
+        if(s1.equals(s3)){
+            System.out.println("Strings are equal");
+        }else{
+            System.out.println("Strings are not equal");
+        }
+    }
+}
+
+ */
+//================================================================================
+//Substring
+/*public class string{
+
+    public static String substring (String str, int si , int ei){
+        String substr = " ";
+        for (int i = si; i < ei; i++) {
+            substr += str.charAt(i);
+        }
+        return substr;
+    }
+    public static void main(String[] args) {
+        String str = "Helloworld";
+        System.out.println(substring(str,0, 5));
+    }
+}
+
+ */
+//================================================================================
+//For a given set of string print the largest string
+//"apple","mango","banana"
+//Use comapreTo function
+
+public class string {
+    public static void main(String[] args) {
+        String fruits[] = {"apple", "mango", "banana"};
+
+        String largest = fruits[0];
+        for (int i = 0 ; i < fruits.length; i++) {
+            if (largest.compareTo(fruits[i]) < 0) {
+                largest = fruits[i];
+            }
+        }
+        System.out.println(largest);
     }
 }
