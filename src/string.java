@@ -11,9 +11,10 @@ public class string {
 //        name = sc.next();
 //        System.out.println(name);
 
-        String firstname = " Chaitanya";
-        String lastname = " Mate ";
+        String firstname = "Chaitanya";
+        String lastname = "Mate";
         String fullname = firstname +" "+ lastname;
         System.out.println(fullname);
+        System.out.println(fullname.charAt(0));
     }
 }
