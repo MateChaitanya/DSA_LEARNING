@@ -350,7 +350,7 @@ public class array {
 
  */
 //===============================================================================================================================
-public class array {
+/*public class array {
     public static int findMax(int numbers[]){
         int min = numbers[0];
         for (int i = 0; i < numbers.length; i++) {
@@ -364,5 +364,25 @@ public class array {
         int numbers[]={2,3,4,5,6,7};
         int min = findMax(numbers);
         System.out.println("Maximum element in the array :" + min);
+    }
+}
+
+ */
+//==============================================================================================================
+public class array {
+
+    public static void printpairs(int numbers[]){
+        for (int i = 0; i < numbers.length ; i++) {
+            int curr = numbers[i];
+            for (int j = i+1; j < numbers.length; j++) {
+                System.out.print("( " + curr +" , " + numbers[j]+" )");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        int numbers[] = {2,4,6,8,10};
+        printpairs(numbers);
+
     }
 }
