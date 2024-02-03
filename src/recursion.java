@@ -81,7 +81,7 @@ public class recursion {
  */
 //========================================================================================================
 //Print Nth fibonacci number
-
+/*
 public class recursion{
     public static int fib(int n ){
         if(n == 0 || n ==1){
@@ -95,5 +95,25 @@ public class recursion{
     public static void main(String[] args) {
         int n = 25;
         System.out.println(fib(n));
+    }
+}
+
+ */
+//============================================================================================
+//Check whether given array is sorted or not
+
+public class recursion {
+    public static boolean isSorted( int arr[],int i){
+        if(i ==arr.length-1){
+            return true;
+        }
+        if(arr[i]>arr[i+1]){
+            return false;
+        }
+        return isSorted(arr,i+1);
+    }
+    public static void main(String[] args) {
+        int arr[] = {1,6,3,4,5};
+        System.out.println(isSorted(arr,0));
     }
 }
