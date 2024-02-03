@@ -101,7 +101,7 @@ public class recursion{
  */
 //============================================================================================
 //Check whether given array is sorted or not
-
+/*
 public class recursion {
     public static boolean isSorted( int arr[],int i){
         if(i ==arr.length-1){
@@ -117,3 +117,44 @@ public class recursion {
         System.out.println(isSorted(arr,0));
     }
 }
+
+ */
+//===================================================================================================
+//Write a function to find the first occurence of an elemnet in an array
+/*
+public class recursion {
+    public static int firstOccurence ( int arr[],int key , int i){
+        if(i == arr.length){
+            return -1;
+        }
+        if(arr[i] == key){
+            return i ;
+        }
+        return firstOccurence(arr,key,i+1);
+    }
+    public static void main(String[] args) {
+        int arr[] = {8,3,6,9,5,10,2,5,3};
+        System.out.println(firstOccurence(arr, 5, 0));
+    }
+}
+
+ */
+//===================================================================================
+//print X^n
+/*
+public class recursion {
+    public static int power(int x,int n){
+        if(n == 0){
+            return 1;
+        }
+        return x*power(x,n-1);
+    }
+    public static void main(String[] args) {
+        System.out.println(power(2,10));
+    }
+}
+
+ */
+//==================================================================================================
+//Print x^n in O(logn)
+
