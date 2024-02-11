@@ -182,7 +182,7 @@ public class recursion {
 
     }
     public static void main(String[] args) {
-        System.out.println(tillingProblem(3));
+        System.out.println(tillingProblem(7));
     }
 }
 
