@@ -15,7 +15,18 @@ public class arraylist {
         System.out.println("Array 1:" + arr1);
         System.out.println("Array 2:" + arr2);
 
+        //appending the new element at the end of the list
 
+        for (int i = 0; i < n; i++) {
+            arr1.add(i);
+            arr2.add(i);
+
+        }
+
+        //printing the arraylist
+
+        System.out.println("Array 1:" + arr1);
+        System.out.println("Array 2:" + arr2);
 
     }
 }
