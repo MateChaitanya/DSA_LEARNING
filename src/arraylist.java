@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+/*
 public class arraylist {
     public static void main(String[] args) {
         int n = 10;
@@ -28,5 +28,24 @@ public class arraylist {
         System.out.println("Array 1:" + arr1);
         System.out.println("Array 2:" + arr2);
 
+    }
+}
+
+ */
+//======================================================================================================================
+//Operations performed in ArrayList
+//1. Adding Elements
+
+
+class arraylist{
+    public static void main(String[] args) {
+        ArrayList<String> a1 = new ArrayList<>();
+
+        a1.add("Geeks");
+        a1.add("Geeks");
+
+        a1.add(1,"For");
+
+        System.out.println(a1);
     }
 }
