@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 /*
 public class arraylist {
     public static void main(String[] args) {
@@ -155,7 +156,7 @@ class arraylist {
  */
 //==========================================================================================
 //5. Get Elements
-
+/*
 class arraylist{
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
@@ -170,5 +171,61 @@ class arraylist{
 
         Integer n = list.get(1);
         System.out.println("at index 1 number is :" + n);
+    }
+}
+
+ */
+
+//=============================================================================
+//6. Add Elements Between Two Numbers
+/*
+class arraylist{
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(4);
+        System.out.println(list);
+        // insert missing element 3
+        list.add(2, 3);
+        System.out.println(list);
+    }
+}
+
+ */
+//=========================================================================================
+//7. ArrayList Sort
+/*
+class arraylist {
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> list = new ArrayList();
+        list.add(2);
+        list.add(4);
+        list.add(3);
+        list.add(1);
+        System.out.println("Before sorting list:");
+        System.out.println(list);
+        Collections.sort(list);
+        System.out.println("after sorting list:");
+        System.out.println(list);
+    }
+}
+
+ */
+//=================================================================================================
+
+//8. Size of Elements
+class arraylist {
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> list = new ArrayList();
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        int b = list.size();
+        System.out.println("The size is :" + b);
     }
 }
