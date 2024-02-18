@@ -293,7 +293,11 @@ public class arraylist {
         list.add(8);
 
         System.out.println(list);
-        Collections.sort(list);
+        Collections.sort(list);//ascending
+        System.out.println(list);
+
+        //descending
+        Collections.sort(list, Collections.reverseOrder());
         System.out.println(list);
     }
 }
