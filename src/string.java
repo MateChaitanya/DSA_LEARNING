@@ -154,7 +154,7 @@ public class string{
 
  */
 //===================================================================================================================================================
-public class string{
+/* public class string{
 
     public static boolean isPalindrome(String str){
         for (int i = 0; i < str.length()/2; i++) {
@@ -170,5 +170,24 @@ public class string{
     public static void main(String[] args) {
         String str = "racecar";
         System.out.println(isPalindrome(str));
+    }
+}
+
+ */
+//==============================================================================
+public class string{
+
+    public static String substring(String str , int si , int ei){
+        String substr = " ";
+        for (int i = si; i <ei; i++) {
+            substr +=str.charAt(i);
+        }
+        return substr;
+
+    }
+    public static void main(String[] args) {
+        String str = "HelloWorld";
+        System.out.println(str.substring(0,5));
+        System.out.println(substring(str,0,5));
     }
 }
