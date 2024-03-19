@@ -301,3 +301,6 @@ public class arraylist {
         System.out.println(list);
     }
 }
+
+
+
