@@ -283,7 +283,7 @@ public class arraylist {
 //=========================================================================================
 //Sorting an ArrayList
 
-public class arraylist {
+/*public class arraylist {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(2);
@@ -299,6 +299,33 @@ public class arraylist {
         //descending
         Collections.sort(list, Collections.reverseOrder());
         System.out.println(list);
+    }
+}*/
+
+
+
+import java.util.ArrayList;
+
+public class arraylist {
+    public static void main(String[] args) {
+        // Create an ArrayList to store integers
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+
+        // Print the ArrayList
+        System.out.println("ArrayList: " + numbers);
+
+        // Access an element by index
+        int num = numbers.get(1); // Gets the element at index 1
+        System.out.println("Element at index 1: " + num);
+
+        // Remove an element
+        numbers.remove(1); // Removes the element at index 1
+        System.out.println("ArrayList after removal: " + numbers);
     }
 }
 
