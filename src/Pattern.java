@@ -32,7 +32,7 @@ public class Pattern {
     }
 }*/
 
-class Pattern{
+/*class Pattern{
     public static void main(String[] args) {
         int n = 4;
         for (int i = 1; i<=n; i++) {
@@ -46,5 +46,30 @@ class Pattern{
             }
             System.out.println();
         }
+    }
+}*/
+
+class Pattern{
+    public static void hallow_rectangle( int totRows, int totCols){
+
+        //Outer loop -> 1 to totRows
+        for (int i = 1; i <= totRows ; i++) {
+
+            //Inner loop -> 1 to totCols
+            for (int j = 1; j <= totCols; j++) {
+
+                //boundary cells
+                if (i == 1 || i == totRows || j == 1 || j == totCols){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        hallow_rectangle(4,5);
     }
 }
