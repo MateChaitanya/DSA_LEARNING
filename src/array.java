@@ -369,7 +369,7 @@ public class array {
 
  */
 //==============================================================================================================
-public class array {
+/*public class array {
 
     public static void printpairs(int numbers[]){
         for (int i = 0; i < numbers.length ; i++) {
@@ -385,4 +385,6 @@ public class array {
         printpairs(numbers);
 
     }
-}
+}*/
+
+//-------------------------------------------------------------------------------------------------------------------
